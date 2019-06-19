@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/subinterface">
+
+    <Button
+        android:id="@+id/Englishlevel"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/englishlevel"
+        android:gravity="center|bottom"
+        android:text="四、六级等级考试"
+        android:textSize="10dp"
+        android:textAlignment="gravity" />
+
+    <Button
+        android:id="@+id/standard"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="20dp"
+        android:layout_alignBottom="@+id/Englishlevel"
+        android:layout_toEndOf="@+id/Englishlevel"
+        android:background="@drawable/standard"
+        android:gravity="center|bottom"
+        android:text="普通话考试"
+        android:textSize="10dp"
+        android:textAlignment="gravity" />
+
+    <Button
+        android:id="@+id/computer"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="20dp"
+        android:layout_alignBottom="@+id/standard"
+        android:layout_toEndOf="@+id/standard"
+        android:background="@drawable/computer"
+        android:gravity="center|bottom"
+        android:text="计算机等级考试"
+        android:textSize="10dp"
+        android:textAlignment="gravity" />
+</RelativeLayout>

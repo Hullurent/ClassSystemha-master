@@ -1,4 +1,4 @@
-package com.kris.classsystem;
+package com.kris.classsystem.Fragment;
 
 
 import android.os.Bundle;
@@ -7,14 +7,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.kris.classsystem.R;
+
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class HomeFragment extends Fragment {
+public class DataAnaFragment extends Fragment {
 
 
-    public HomeFragment() {
+    public DataAnaFragment() {
         // Required empty public constructor
     }
 
@@ -23,7 +25,7 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the fragment_start for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+        return inflater.inflate(R.layout.fragment_data_ana, container, false);
     }
 
 }

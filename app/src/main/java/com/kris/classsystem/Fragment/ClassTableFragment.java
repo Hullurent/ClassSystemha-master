@@ -1,4 +1,4 @@
-package com.kris.classsystem;
+package com.kris.classsystem.Fragment;
 
 
 import android.os.Bundle;
@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.kris.classsystem.R;
 import com.zhuangfei.timetable.TimetableView;
 import com.zhuangfei.timetable.model.Schedule;
 

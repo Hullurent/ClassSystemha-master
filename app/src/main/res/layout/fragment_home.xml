@@ -7,17 +7,17 @@
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
     android:orientation="vertical">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="40dp">
+        android:layout_height="wrap_content">
 
     </LinearLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@drawable/background">
 
         <TextView
             android:layout_width="wrap_content"
@@ -42,104 +42,105 @@
             android:layout_height="70dp"
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
+            android:layout_marginTop="50dp"
             android:src="@drawable/timg" />
     </RelativeLayout>
 
-    <TableLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:collapseColumns="2"
-        android:shrinkColumns="1,2">
-
-        <TableRow
-            android:id="@+id/row1"
-            android:layout_width="match_parent"
-            android:layout_marginStart="2.0dp"
-            android:layout_marginEnd="2.0dp"
-            android:paddingTop="10dp"
-            android:paddingBottom="3dp">
+        android:layout_height="wrap_content">
 
             <Button
                 android:id="@+id/timetable"
                 style="?android:attr/borderlessButtonStyle"
-                android:layout_width="150dp"
-                android:layout_height="120dp"
-                android:layout_marginStart="10dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:background="@drawable/timetable1"
                 android:gravity="center|bottom"
                 android:text="课程表"
+                android:textSize="10dp"
+                android:layout_marginStart="30dp"
                 android:textAlignment="gravity" />
 
             <Button
                 android:id="@+id/examination"
                 style="?android:attr/borderlessButtonStyle"
-                android:layout_width="150dp"
-                android:layout_height="120dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="30dp"
                 android:background="@drawable/examination1"
                 android:gravity="center|bottom"
                 android:text="考试报名"
-                android:textAlignment="gravity" />
-        </TableRow>
-
-        <TableRow
-            android:id="@+id/row2"
-            android:layout_width="match_parent"
-            android:layout_marginStart="2.0dp"
-            android:layout_marginEnd="2.0dp"
-            android:paddingTop="10dp"
-            android:paddingBottom="3dp">
+                android:textSize="10dp"
+                android:textAlignment="gravity"
+                android:layout_alignBottom="@+id/timetable"
+                android:layout_toEndOf="@+id/timetable" />
 
             <Button
                 android:id="@+id/search"
                 style="?android:attr/borderlessButtonStyle"
-                android:layout_width="150dp"
-                android:layout_height="120dp"
-                android:layout_marginStart="10dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="30dp"
                 android:background="@drawable/grade1"
                 android:gravity="center|bottom"
                 android:text="成绩查询"
-                android:textAlignment="gravity" />
+                android:textSize="10dp"
+                android:textAlignment="gravity"
+                android:layout_alignBottom="@+id/examination"
+                android:layout_toEndOf="@+id/examination" />
 
             <Button
                 android:id="@+id/rank"
                 style="?android:attr/borderlessButtonStyle"
-                android:layout_width="150dp"
-                android:layout_height="120dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:background="@drawable/rank1"
                 android:gravity="center|bottom"
                 android:text="成绩排名"
-                android:textAlignment="gravity" />
-        </TableRow>
-
-        <TableRow
-            android:id="@+id/row3"
-            android:layout_width="match_parent"
-            android:layout_marginStart="2.0dp"
-            android:layout_marginEnd="2.0dp"
-            android:paddingTop="10dp"
-            android:paddingBottom="3dp">
+                android:textSize="10dp"
+                android:textAlignment="gravity"
+                android:layout_alignStart="@+id/timetable"
+                android:layout_below="@+id/timetable" />
 
             <Button
                 android:id="@+id/yellowpage"
                 style="?android:attr/borderlessButtonStyle"
-                android:layout_width="150dp"
-                android:layout_height="120dp"
-                android:layout_marginStart="10dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="30dp"
                 android:background="@drawable/huangli1"
                 android:gravity="center|bottom"
                 android:text="校园黄历"
-                android:textAlignment="gravity" />
+                android:textSize="10dp"
+                android:textAlignment="gravity"
+                android:layout_alignBottom="@+id/rank"
+                android:layout_toEndOf="@+id/rank" />
 
             <Button
                 android:id="@+id/library"
                 style="?android:attr/borderlessButtonStyle"
-                android:layout_width="150dp"
-                android:layout_height="120dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:background="@drawable/library1"
                 android:gravity="center|bottom"
                 android:text="图书馆预约"
-                android:textAlignment="gravity" />
-        </TableRow>
-    </TableLayout>
+                android:textSize="10dp"
+                android:textAlignment="gravity"
+                android:layout_marginStart="30dp"
+                android:layout_alignBottom="@+id/yellowpage"
+                android:layout_toEndOf="@+id/yellowpage" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_below="@+id/account_img"
+            android:background="@color/app_bg" />
+    </RelativeLayout>
 </LinearLayout>
 </ScrollView>
