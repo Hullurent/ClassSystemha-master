@@ -18,7 +18,6 @@ public class MainActivity extends AppCompatActivity {
     private BottomNavigationView mMainNav;
     private FrameLayout mMainFrame;
     private HomeFragment homeFragment;
-    private StartActivity startActivity;
     private ClassTableFragment classTableFragment;
     private DataAnaFragment dataAnaFragment;
     private AccountFragment accountFragment;
@@ -34,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
         classTableFragment = new ClassTableFragment();
         dataAnaFragment = new DataAnaFragment();
         accountFragment = new AccountFragment();
-        startActivity = new StartActivity();
 
         setFragment(homeFragment);
 
