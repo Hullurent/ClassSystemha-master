@@ -34,7 +34,8 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         username = findViewById(R.id.username);
         passwd = findViewById(R.id.password);
-
+        Login = findViewById(R.id.login);
+        clickEvent();
     }
 
 
