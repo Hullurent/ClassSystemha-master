@@ -1,4 +1,4 @@
-package com.kris.classsystem;
+package com.kris.classsystem.View.Activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;

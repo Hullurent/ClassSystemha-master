@@ -1,4 +1,4 @@
-package com.kris.classsystem;
+package com.kris.classsystem.View.Activity;
 
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -9,10 +9,11 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
 
-import com.kris.classsystem.Fragment.AccountFragment;
-import com.kris.classsystem.Fragment.ClassTableFragment;
-import com.kris.classsystem.Fragment.DataAnaFragment;
-import com.kris.classsystem.Fragment.HomeFragment;
+import com.kris.classsystem.View.Fragment.AccountFragment;
+import com.kris.classsystem.View.Fragment.ClassTableFragment;
+import com.kris.classsystem.View.Fragment.DataAnaFragment;
+import com.kris.classsystem.View.Fragment.HomeFragment;
+import com.kris.classsystem.R;
 
 public class MainActivity extends AppCompatActivity {
     private BottomNavigationView mMainNav;

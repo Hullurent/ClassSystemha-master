@@ -1,4 +1,4 @@
-package com.kris.classsystem.Fragment;
+package com.kris.classsystem.View.Fragment;
 
 
 import android.os.Bundle;

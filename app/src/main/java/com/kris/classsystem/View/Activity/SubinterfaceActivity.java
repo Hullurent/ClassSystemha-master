@@ -1,4 +1,4 @@
-package com.kris.classsystem;
+package com.kris.classsystem.View.Activity;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import com.kris.classsystem.R;
 
 public class SubinterfaceActivity extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package com.kris.classsystem.Fragment;
+package com.kris.classsystem.View.Fragment;
 
 
 import android.content.Intent;
@@ -10,9 +10,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.kris.classsystem.LoginActivity;
+import com.kris.classsystem.View.Activity.LoginActivity;
 import com.kris.classsystem.R;
-import com.kris.classsystem.SubinterfaceActivity;
+import com.kris.classsystem.View.Activity.SubinterfaceActivity;
 
 
 /**
