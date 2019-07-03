@@ -1,4 +1,4 @@
-package com.kris.classsystem.Handler;
+package com.kris.javalibrary.Handler;
 
 public interface Trigger {
 

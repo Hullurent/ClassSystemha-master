@@ -1,6 +1,7 @@
-package com.kris.classsystem.Model;
+package com.kris.javalibrary.Model;
 
-import com.kris.classsystem.Bean.MyCookies;
+
+import com.kris.javalibrary.Bean.MyCookies;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;

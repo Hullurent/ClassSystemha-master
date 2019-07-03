@@ -1,7 +1,8 @@
-package com.kris.classsystem.Model;
+package com.kris.javalibrary.Model;
 
-import com.kris.classsystem.Bean.MyCookies;
-import com.kris.classsystem.Bean.MySubject;
+
+import com.kris.javalibrary.Bean.MyCookies;
+import com.kris.javalibrary.Bean.MySubject;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -17,22 +18,19 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-
 public class GetMysubject {
-    private MyCookies myCookies; // Todo test 暂时开放
-    private List<MySubject> myCourses;
+    public MyCookies myCookies; // Todo test 暂时开放
+    private List<MySubject> myCourses = new ArrayList<>();
 
 
     // Constructor
 
     public GetMysubject(MyCookies myCookies) {
         this.myCookies = myCookies;
-        myCourses = new ArrayList<>();
+        this.go();
     }
 
-    public List<MySubject> getcourse() {
-        go();
-        //System.out.println(myCourses.get(0).getName());
+    public List<MySubject> getcourses() {
         return myCourses;
     }
 
@@ -43,6 +41,7 @@ public class GetMysubject {
         String cookies = "name=value; jwxkxt=" + myCookies.getJwxkxt() + "; ASP.NET_SessionId=" + myCookies.getASP_sessionid();
         String Sel_XZBJ = "2016080701";
         String Sel_XNXQ = "20190";
+
 
         for (int i = 1; i <= 10; i++) {
             Request request1 = new Request.Builder()
@@ -84,7 +83,6 @@ public class GetMysubject {
             }
         }
 
-
     }
 
     private void filter(Document document, int i) {
@@ -92,7 +90,6 @@ public class GetMysubject {
         String classRoom = null;
 
         Element table = document.getElementsByTag("table").last();
-        //System.out.println(table);
         Elements tbody = Jsoup.parse(table.toString().replaceAll("<td width=\"10%\" align=\"center\">", "")).getElementsByTag("tbody");
 
         for (Element element : tbody) {
@@ -108,21 +105,21 @@ public class GetMysubject {
                 else {
                     className = element1.getElementsByAttributeValue("width", "'22%'").text();
                     //className = className.substring(1, className.length());
-                    // System.out.println(className);
+                    //System.out.println(className);
                 }
                 if (!"".equals(element1.getElementsByAttributeValue("width", "\'16%\'").text())) {
                     classRoom = element1.getElementsByAttributeValue("width", "\'16%\'").text();
-                    //  System.out.println(classRoom);
+                    //System.out.println(classRoom);
                 }
                 String weeks = element1.getElementsByAttributeValue("width", "\'12%\'").text();
-                //System.out.println(weeks);
+                // System.out.println(weeks);
 
                 String teacher = element1.getElementsByAttributeValue("width", "'10%'").text();
-                // System.out.println(teacher);
+                //System.out.println(teacher);
                 int weekNum = transformWeek(weeks);
-                // System.out.println(weekNum);
+                //System.out.println(weekNum);
                 int start = Integer.parseInt(weeks.subSequence(2, 3).toString());
-                //System.out.println(start);
+                // System.out.println(start);
                 int end = Integer.parseInt(weeks.substring(weeks.indexOf("-") + 1, weeks.indexOf("节")));
                 // System.out.println(end);
                 List<Integer> weekList = new ArrayList<>(Arrays.asList(i)); // Todo 去了解java核心collection.

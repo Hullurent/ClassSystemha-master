@@ -1,7 +1,7 @@
-package com.kris.classsystem.Handler;
+package com.kris.javalibrary.Handler;
 
-import com.kris.classsystem.Model.CAS_Login;
 
+import com.kris.javalibrary.Model.CAS_Login;
 
 public class Handle_login implements Trigger {
     CAS_Login cas_login = new CAS_Login();

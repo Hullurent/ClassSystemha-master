@@ -2,7 +2,6 @@ package com.kris.classsystem.View.Activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -37,7 +36,7 @@ public class LoginActivity extends AppCompatActivity {
             } else if (passwd.getText().toString().isEmpty()) {
                 Toast.makeText(LoginActivity.this, "请输入密码", Toast.LENGTH_SHORT).show();
             } else {
-                handle_login.activity_sync();
+                handle_login.activity_trigger();
             }
         });
 

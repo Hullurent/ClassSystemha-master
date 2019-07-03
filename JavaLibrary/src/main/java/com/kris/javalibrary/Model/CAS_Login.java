@@ -24,10 +24,10 @@
  *          佛祖保佑             永无BUG
  */
 
-package com.kris.classsystem.Model;
+package com.kris.javalibrary.Model;
 
 
-import com.kris.classsystem.Bean.MyCookies;
+import com.kris.javalibrary.Bean.MyCookies;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -71,7 +71,6 @@ public class CAS_Login {
 
     private void getCookies() {
 
-
         try {
             // 创建模拟客户端
             OkHttpClient client = new OkHttpClient.Builder()
@@ -111,8 +110,7 @@ public class CAS_Login {
             // System.out.println(coo);
             final String sessionid = coo.get(0); // Todo 需要处理
             JSESSIONID = sessionid.substring(11, sessionid.indexOf(";"));
-
-            System.out.println(JSESSIONID);
+            // System.out.println(JSESSIONID);
 
 
 //        if(!response.isSuccessful()){
@@ -129,7 +127,7 @@ public class CAS_Login {
                     .build();
 
             Response response2 = client.newCall(request).execute(); // 无需传值到response
-            System.out.println(response2);
+            //System.out.println(response2);
 
 
             request = new Request.Builder()
@@ -137,7 +135,7 @@ public class CAS_Login {
                     .addHeader("User-Agent", userAgent)
                     .build();
             response2 = client.newCall(request).execute();
-            System.out.println(response2);
+            // System.out.println(response2);
 
 
             //第四次POST请求, 前往CAS客户端进行验证获取会话
@@ -153,7 +151,7 @@ public class CAS_Login {
                     .build();
 
             Response response3 = client.newCall(request).execute();
-            System.out.println(response3); // 得到ticket_url
+            // System.out.println(response3); // 得到ticket_url
             final Headers headers3 = response3.headers();
             // System.out.println(headers3);
 
@@ -177,17 +175,17 @@ public class CAS_Login {
             }
 
 
-            System.out.println(jwxkxt);
-            System.out.println(ASP_sessionid);
+            //  System.out.println(jwxkxt);
+            // System.out.println(ASP_sessionid);
 
             String request_cookie = "name=value; jwxkxt=" + jwxkxt + "; ASP.NET_SessionId=" + ASP_sessionid;
-            System.out.println(request_cookie);
+            // System.out.println(request_cookie);
 
 
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-
     }
+
 }

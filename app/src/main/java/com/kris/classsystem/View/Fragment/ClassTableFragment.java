@@ -7,9 +7,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.kris.classsystem.Bean.MySubject;
+import com.kris.classsystem.Handler.Handle_timetable;
 import com.kris.classsystem.R;
 import com.zhuangfei.timetable.TimetableView;
-import com.zhuangfei.timetable.model.Schedule;
 
 import java.util.List;
 
@@ -20,7 +21,7 @@ import java.util.List;
 public class ClassTableFragment extends Fragment {
 
     private TimetableView mtimetableView;
-    private List<Schedule> baby;
+    private List<MySubject> mcourses;
     public ClassTableFragment() {
         // Required empty public constructor
     }
@@ -31,11 +32,13 @@ public class ClassTableFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         // Inflate the fragment_start for this fragment
+
         View view=inflater.inflate(R.layout.fragment_class_table, container, false);
         mtimetableView = view.findViewById(R.id.id_timetableView);
-        mtimetableView.data(baby).curWeek(1).showView();
+        Handle_timetable mhandle_timetable = new Handle_timetable(mtimetableView);
+        mhandle_timetable.execute(10);
         return view;
     }
 
-    
+
 }

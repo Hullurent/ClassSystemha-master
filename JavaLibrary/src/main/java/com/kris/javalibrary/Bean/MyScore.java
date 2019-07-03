@@ -1,4 +1,4 @@
-package com.kris.classsystem.Util;
+package com.kris.javalibrary.Bean;
 
 import java.io.Serializable;
 

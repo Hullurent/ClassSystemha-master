@@ -1,4 +1,4 @@
-package com.kris.classsystem.Handler;
+package com.kris.javalibrary.Handler;
 
 public class Handle_score implements Trigger {
     @Override

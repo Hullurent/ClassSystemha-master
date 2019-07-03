@@ -1,14 +1,52 @@
 package com.kris.classsystem.Handler;
 
-public class Handle_timetable implements Trigger {
+import android.os.AsyncTask;
+import android.util.Log;
+import android.view.View;
+
+import com.kris.classsystem.Bean.MySubject;
+import com.kris.classsystem.Model.CAS_Login;
+import com.kris.classsystem.Model.GetMysubject;
+import com.zhuangfei.timetable.TimetableView;
+
+import java.util.List;
+
+public class Handle_timetable extends AsyncTask<Integer, Void, List<MySubject>> {
+    private List<MySubject> mySubjects;
+    private TimetableView mtimetableView;
+    private View view;
+
+    public Handle_timetable(TimetableView timetableView) {
+        super();
+        this.mtimetableView = timetableView;
+    }
+
+    public List<MySubject> dataDeliver() {
+
+
+        CAS_Login cas_login = new CAS_Login();
+        GetMysubject getMysubject = new GetMysubject(cas_login.getMyCookies());
+
+        List<MySubject> mySubjects = getMysubject.getcourse();
+        Log.d("t2", "dataDeliver: ok");
+        //Log.d("t2", mySubjects.get(0).getName());
+        return mySubjects;
+    }
+
 
     @Override
-    public void activity_sync() {
-
+    protected List<MySubject> doInBackground(Integer... integers) {
+        Log.d("t1", "doInBackground: ");
+        mySubjects = dataDeliver();
+        return mySubjects;
     }
 
     @Override
-    public void play_with_model() {
+    protected void onPostExecute(List<MySubject> mySubjects) {
+
+        mtimetableView.source(mySubjects).showView();
 
     }
+
+
 }
